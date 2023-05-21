@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.png';
 import './Navbar.css';
 import { FaUser, FaSearch } from 'react-icons/fa';
@@ -7,6 +7,16 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+
+    const title = ["Livraison et retours gratuits", "-25 % POUR L'ACHAT DE DEUX ARTICLES OU PLUS"];
+    const [currentState , setCurrentState] = useState(0)
+    useEffect (()=>{
+        const intervalId = setInterval(()=>{
+            setCurrentState((currentState+1)%title.length);
+        },2000);
+        return ()=> clearInterval(intervalId);
+    },[currentState])
+
     return (
         <div>
             <nav className='navbar navbar-expand-lg navbar-light bg-white'>
@@ -40,6 +50,9 @@ export default function Navbar() {
                         </li>
                     </div>
                 </div>
+            </nav>
+            <nav>
+                <h3 className='bg-dark text-white text-center ' >{`${title[currentState]}`}</h3>
             </nav>
         </div>
     );
