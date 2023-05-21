@@ -53,7 +53,7 @@ export default function Topnavbar() {
                 <div className='container-fluid  ' >
                     <div className=' d-flex justify-content-start' >
                         <li className='nav-link' >
-                            <img className='img' src={logo2} />
+                            <img className='img  mx-4' src={logo2} />
                         </li>
                         <li className='nav-link' >
                             <img className='img' src={logo1} />
