@@ -1,0 +1,19 @@
+.logo {
+    height: 100px;
+    width: 150px;
+    position: relative;
+    margin: 0 auto;
+    top: -20px;
+}
+.form-container {
+    box-shadow: 4px 4px 4px 4px black;
+    padding: 20px;
+    max-width: 500px;
+    max-height: 650px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.p{
+    color: #a6a6a6;
+}
+

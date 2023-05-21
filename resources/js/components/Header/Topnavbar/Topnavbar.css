@@ -1,0 +1,10 @@
+.img {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+.link-style {
+    text-decoration: none;
+    color: inherit;
+}
+
