@@ -12,11 +12,11 @@ export default function Navbar() {
             <nav className='navbar navbar-expand-lg navbar-light bg-white'>
                 <div className='container-fluid'>
                     <div className='d-flex align-items-center'>
-                        <img className='logo mx-5' src={logo} alt='Logo' />
+                        <Link to='/' ><img className='logo mx-5' src={logo} alt='Logo' /></Link>
                     </div>
                     <div className='d-flex justify-content-center'>
                         <Link className='link-style' to="/homme" ><li className='nav-link mx-3 fw-bold fs-5'>Homme</li></Link>
-                        <Link className='link-style' to="/femmme" ><li className='nav-link mx-3 fw-bold fs-5'>Femme</li></Link>
+                        <Link className='link-style' to="/femme" ><li className='nav-link mx-3 fw-bold fs-5'>Femme</li></Link>
                         <Link className='link-style' to="/enfant" ><li className='nav-link mx-3 fw-bold fs-5'>Enfant</li></Link>
                         <Link className='link-style' to="/accessoires" ><li className='nav-link mx-3 fw-bold fs-5'>Accessoires</li></Link>
                     </div>
