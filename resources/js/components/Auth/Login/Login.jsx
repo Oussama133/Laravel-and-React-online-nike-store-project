@@ -54,11 +54,13 @@ export default function Login() {
                     <label htmlFor="email">Adresse E-mail* :</label>
                     <input type="email" className='form-control' name='email' placeholder='E-mail'
                     value={loginInput.email} onChange={handleInput} />
+                    <span style={{'color':'red'}} >{loginInput.error_list.email}</span>
                 </div>
                 <div className='form-group' >
                     <label htmlFor="password">Password* :</label>
                     <input type="password" className='form-control' name='password' placeholder='Password'
                      value={loginInput.password} onChange={handleInput} />
+                     <span style={{'color':'red'}} >{loginInput.error_list.password}</span>
                 </div><br />
                 <p className='p' >En continuant j'accepte <Link to='/policy' ><span style={{ textDecoration: "underline" }} >la politique de confidentialité </span></Link>
                     et <Link to='/condition' ><span style={{ textDecoration: "underline" }} >les conditions d'utilisation</span></Link>de Nike .</p>
