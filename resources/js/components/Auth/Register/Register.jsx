@@ -3,7 +3,7 @@ import logo from './logo.png'
 import './Register.css'
 import axios from 'axios'
 import swal from 'sweetalert'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate , Link } from 'react-router-dom'
 
 
 export default function Register() {
@@ -50,7 +50,7 @@ export default function Register() {
     return (
         <div className='d-flex justify-content-center' >
             <form className='form-container' onSubmit={registerSubmit} >
-                    <img src={logo} className='logo d-flex justify-content-center' />
+                    <Link to='/' ><img src={logo} className='logo d-flex justify-content-center' /></Link>
                     <h2 className='headline' >SOYEZ LE PREMIER INFORMÉ</h2>
                     <p className='p' >
                         Inscrivez-vous pour recevoir les e-mails Nike et profiter
@@ -76,7 +76,8 @@ export default function Register() {
                         <label htmlFor="password">Password* :</label>
                         <input type="password" className="form-control" name='password' placeholder="Inscrire votre Mot de passe"
                         value={registerInput.password} onChange={handleInput} />
-                    </div>
+                    </div><br />
+                    <Link to='/login' ><p>Je ai déjà un compte </p></Link>
                     <button type="submit" className="btn btn-dark float-end mt-3 rounded">Créer un compte</button>
             </form>
         </div>

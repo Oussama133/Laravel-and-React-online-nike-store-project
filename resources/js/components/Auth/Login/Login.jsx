@@ -47,7 +47,7 @@ export default function Login() {
     return (
         <div className='d-flex justify-content-center align-items-center '  >
             <form className='form-container mt-5' onSubmit={loginSubmit} >
-                <img src={logo} className='logo d-flex justify-content-center' />
+                <Link to='/' ><img src={logo} className='logo d-flex justify-content-center' /></Link>
                 <h2>Entrez votre email pour nous rejoindre ou connectez-vous.</h2>
                 <p className='p' >Maroc</p>
                 <div className='form-group' >
