@@ -5,8 +5,20 @@ import { FaUser, FaSearch } from 'react-icons/fa';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import Profile from '../../Profile/Profile';
 
 export default function Navbar() {
+
+    const [isProfileModalOpen,setIsProfileModalOpen]=useState(false);
+    const isAuthenticated = !!localStorage.getItem('auth_name');
+
+    const toggleProfileModal = () => {
+        setIsProfileModalOpen(!isProfileModalOpen);
+    }
+    const closeProfileModal = () => {
+        setIsProfileModalOpen(false)
+    }
+// --------------------------------------------------------------------------------------------------
 
     const title = ["Livraison et retours gratuits", "-25 % POUR L'ACHAT DE DEUX ARTICLES OU PLUS"];
     const [currentState , setCurrentState] = useState(0)
@@ -42,7 +54,7 @@ export default function Navbar() {
                         <li className='nav-link mx-1'>
                             <AiOutlineHeart className='icon' />
                         </li>
-                        <li className='nav-link mx-1'>
+                        <li className='nav-link mx-1' onClick={toggleProfileModal} >
                             <FaUser className='icon' />
                         </li>
                         <li className='nav-link mx-1'>
@@ -54,6 +66,7 @@ export default function Navbar() {
             <nav>
                 <h3 className='bg-dark text-white text-center ' >{`${title[currentState]}`}</h3>
             </nav>
+            {isProfileModalOpen && isAuthenticated && <Profile onClose={closeProfileModal} />}
         </div>
     );
 }

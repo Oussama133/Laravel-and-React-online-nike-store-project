@@ -35,7 +35,7 @@ export default function Login() {
                     navigate('/')
                 }
                 else if (res.data.status === 401) {
-                    swal("Warning", res.data.message, "warning");
+                    swal("Avertissement", res.data.message, "warning");
                 }
                 else {
                     setLogin({ ...loginInput, error_list: res.data.validation_errors });

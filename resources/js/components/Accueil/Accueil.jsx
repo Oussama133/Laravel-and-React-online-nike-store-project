@@ -63,7 +63,7 @@ export default function Accueil() {
 {/* ----------------------------------------------------------------------------------------------------- */}
             <div>
                 <h2 className='mx-5 my-4' >Le mois de l'Air</h2>
-                <div className="container">
+                <div className="container cards">
                     <div className="scroll-container">
                         <div className="card-deck row">
 

@@ -36,7 +36,7 @@ class AuthController extends Controller
                 'status' => 200,
                 'username' => $user->nom,
                 'token' => $token,
-                'message' => 'Registered Successfully'
+                'message' => 'Inscription réussie'
             ]);
         }
     }
@@ -59,7 +59,7 @@ class AuthController extends Controller
             if (!$user || !Hash::check($request->password, $user->password)) {
                 return response()->json([
                     'status' => 401,
-                    'message' => 'Invalid Credentials',
+                    'message' => 'Identifiants incorrects',
                 ]);
             } else {
                 $token = $user->createToken($user->email . '_Token')->plainTextToken;
@@ -67,7 +67,7 @@ class AuthController extends Controller
                     'status' => 200,
                     'username' => $user->nom,
                     'token' => $token,
-                    'message' => 'Logged in Successfully'
+                    'message' => 'Connexion réussie'
                 ]);
             }
         }
@@ -79,7 +79,7 @@ class AuthController extends Controller
         $request->user()->currentAccessToken()->delete();
         return response()->json([
             'status' => 200,
-            'message' => 'Logged Out Successfully',
+            'message' => 'Déconnexion réussie',
         ]);
     }
 }

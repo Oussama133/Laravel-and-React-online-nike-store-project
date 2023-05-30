@@ -42,7 +42,7 @@ export default function Topnavbar() {
                 <span className='fw-bold mx-2 my-0' >|</span>
                 <Link to='#' className='link-style' ><li className='nav-link fw-bold' >Nous Contacter</li></Link>
                 <span className='fw-bold mx-2 my-0'>|</span>
-                <Link to='/register' className='link-style' ><li className='nav-link fw-bold' onClick={logoutSubmit} >Logout</li></Link>
+                <Link to='/register' className='link-style' ><li className='nav-link fw-bold' onClick={logoutSubmit} >Déconnexion</li></Link>
             </div>
         )
     }

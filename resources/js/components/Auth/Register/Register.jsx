@@ -38,7 +38,7 @@ export default function Register() {
                 if (res.data.status === 200) {
                     localStorage.setItem('auth_token', res.data.token)
                     localStorage.setItem('auth_name', res.data.username)//save the token and name on local storage application
-                    swal('Success', res.data.message, 'success')
+                    swal('Succès', res.data.message, 'success')
                     navigate('/')
                 } else {
                     setRegister({ ...registerInput, error_list: res.data.validation_errors });

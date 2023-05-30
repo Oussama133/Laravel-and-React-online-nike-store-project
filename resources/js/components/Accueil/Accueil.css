@@ -4,4 +4,6 @@
 .slide-comp{
     margin-top: -8px;
 }
-
+.card {
+    z-index: -1;
+}
