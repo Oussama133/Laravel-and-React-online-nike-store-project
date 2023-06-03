@@ -31,8 +31,13 @@ export default function Login() {
                 if (res.data.status === 200) {
                     localStorage.setItem('auth_token', res.data.token);
                     localStorage.setItem('auth_name', res.data.username);
+                    localStorage.setItem('auth_role',res.data.role)
                     swal("Success", res.data.message, "success")
-                    navigate('/')
+                    if (res.data.role == 'admin') {
+                        navigate('/admin')
+                    } else {
+                        navigate('/')
+                    }
                 }
                 else if (res.data.status === 401) {
                     swal("Avertissement", res.data.message, "warning");

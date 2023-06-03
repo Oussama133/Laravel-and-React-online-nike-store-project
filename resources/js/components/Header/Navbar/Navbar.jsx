@@ -7,7 +7,7 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import Profile from '../../Profile/Profile';
 
-export default function Navbar() {
+export default function Navbar({role}) {
 
     const [isProfileModalOpen,setIsProfileModalOpen]=useState(false);
     const isAuthenticated = !!localStorage.getItem('auth_name');
@@ -41,6 +41,9 @@ export default function Navbar() {
                         <Link className='link-style' to="/femme" ><li className='nav-link mx-3 fw-bold fs-5'>Femme</li></Link>
                         <Link className='link-style' to="/enfant" ><li className='nav-link mx-3 fw-bold fs-5'>Enfant</li></Link>
                         <Link className='link-style' to="/accessoires" ><li className='nav-link mx-3 fw-bold fs-5'>Accessoires</li></Link>
+                        {isAuthenticated && role == 'admin' && (
+                            <Link className='link-style' to="/admin"><li className='nav-link mx-3 fw-bold fs-5' >Admin Panel</li></Link>
+                        )}
                     </div>
                     <div className='d-flex justify-content-end align-items-center'>
                         <li className='nav-link'>

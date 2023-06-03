@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo1 from './logo1.png'
 import logo2 from './logo2.png'
 import './Topnavbar.css'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import swal from 'sweetalert'
+import Contact from '../../Contact-Us/Contact'
 
 export default function Topnavbar() {
+
+    const [isContactModalOpen , setIsContactModalOpen] = useState(false);
+    const toggleContactModal = () => {
+        setIsContactModalOpen(!isContactModalOpen)
+    }
+    const closeContactModal = () => {
+        setIsContactModalOpen(false)
+    }
 
     const navigate = useNavigate();
 
@@ -28,7 +37,7 @@ export default function Topnavbar() {
             <div className='d-flex justify-content-end' >
                 <Link to="#" className='link-style' ><li className='nav-link fw-bold' >Aide</li></Link>
                 <span className='fw-bold mx-2 my-0' >|</span>
-                <Link to='#' className='link-style' ><li className='nav-link fw-bold' >Nous Contacter</li></Link>
+                <Link to='#' className='link-style' ><li className='nav-link fw-bold' onClick={toggleContactModal} >Nous Contacter</li></Link>
                 <span className='fw-bold mx-2 my-0'>|</span>
                 <Link to='/register' className='link-style' ><li className='nav-link fw-bold' >Nous Rejoindre</li></Link>
                 <span className='fw-bold mx-2 my-0' >|</span>
@@ -40,7 +49,7 @@ export default function Topnavbar() {
             <div className='d-flex justify-content-end' >
                 <Link to="#" className='link-style' ><li className='nav-link fw-bold' >Aide</li></Link>
                 <span className='fw-bold mx-2 my-0' >|</span>
-                <Link to='#' className='link-style' ><li className='nav-link fw-bold' >Nous Contacter</li></Link>
+                <Link to='#' className='link-style' ><li className='nav-link fw-bold' onClick={toggleContactModal} >Nous Contacter</li></Link>
                 <span className='fw-bold mx-2 my-0'>|</span>
                 <Link to='/register' className='link-style' ><li className='nav-link fw-bold' onClick={logoutSubmit} >Déconnexion</li></Link>
             </div>
@@ -62,6 +71,7 @@ export default function Topnavbar() {
                     {AuthButton}
                 </div>
             </nav>
+            {isContactModalOpen && <Contact onClose={closeContactModal} />}
         </div>
     )
 }
