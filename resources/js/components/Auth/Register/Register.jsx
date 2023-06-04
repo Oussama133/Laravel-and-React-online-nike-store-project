@@ -38,7 +38,7 @@ export default function Register() {
                 if (res.data.status === 200) {
                     localStorage.setItem('auth_token', res.data.token)
                     localStorage.setItem('auth_name', res.data.username)//save the token and name on local storage application
-                    swal('Success', res.data.message, 'success')
+                    swal('Succès', res.data.message, 'success')
                     navigate('/')
                 } else {
                     setRegister({ ...registerInput, error_list: res.data.validation_errors });
@@ -61,21 +61,25 @@ export default function Register() {
                         <label htmlFor="email">Adresse E-mail* :</label>
                         <input type="email" className="form-control" name='email' placeholder="Inscrire votre email address"
                         value={registerInput.email} onChange={handleInput} />
+                        <span style={{'color':'red'}} >{registerInput.error_list.email}</span>
                     </div>
                     <div className="form-group">
                         <label htmlFor="nom">Prénom* :</label>
                         <input type="nom" className="form-control" name='nom' placeholder="Inscrire votre nom"
                         value={registerInput.nom} onChange={handleInput} />
+                        <span style={{'color':'red'}} >{registerInput.error_list.nom}</span>
                     </div>
                     <div className="form-group">
                         <label htmlFor="prenom">Nom de Famille* :</label>
                         <input type="prenom" className="form-control" name='prenom' placeholder="Inscrire votre Prenom"
                         value={registerInput.prenom} onChange={handleInput} />
+                        <span style={{'color':'red'}} >{registerInput.error_list.prenom}</span>
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">Password* :</label>
                         <input type="password" className="form-control" name='password' placeholder="Inscrire votre Mot de passe"
                         value={registerInput.password} onChange={handleInput} />
+                        <span style={{'color':'red'}} >{registerInput.error_list.password}</span>
                     </div><br />
                     <Link to='/login' ><p>Je ai déjà un compte </p></Link>
                     <button type="submit" className="btn btn-dark float-end mt-3 rounded">Créer un compte</button>

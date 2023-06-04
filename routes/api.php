@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,13 @@ Route::post('register', [AuthController::class , 'register']);
 Route::post('login', [AuthController::class , 'login']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
-    Route::get('/checkingAuthenticated',function(){
-        return response()->json(['message'=>'you are in ','status'=>200],200);
-    });
     Route::post('logout',[AuthController::class ,'logout']);
+    Route::get('show',[ProfileController::class,'show']);
+    Route::post('delete',[ProfileController::class,'deleteProfile']);
+    Route::post('update',[ProfileController::class,'update']);
+    Route::post('update-password',[ProfileController::class,'updatePassword']);
+
+    Route::group(['middleware'=>['admin']],function(){
+        //every function route that you want only the admin to use
+    });
 });

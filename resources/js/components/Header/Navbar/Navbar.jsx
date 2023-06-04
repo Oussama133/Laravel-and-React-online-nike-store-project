@@ -5,8 +5,20 @@ import { FaUser, FaSearch } from 'react-icons/fa';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import Profile from '../../Profile/Profile';
 
-export default function Navbar() {
+export default function Navbar({role}) {
+
+    const [isProfileModalOpen,setIsProfileModalOpen]=useState(false);
+    const isAuthenticated = !!localStorage.getItem('auth_name');
+
+    const toggleProfileModal = () => {
+        setIsProfileModalOpen(!isProfileModalOpen);
+    }
+    const closeProfileModal = () => {
+        setIsProfileModalOpen(false)
+    }
+// --------------------------------------------------------------------------------------------------
 
     const title = ["Livraison et retours gratuits", "-25 % POUR L'ACHAT DE DEUX ARTICLES OU PLUS"];
     const [currentState , setCurrentState] = useState(0)
@@ -29,6 +41,9 @@ export default function Navbar() {
                         <Link className='link-style' to="/femme" ><li className='nav-link mx-3 fw-bold fs-5'>Femme</li></Link>
                         <Link className='link-style' to="/enfant" ><li className='nav-link mx-3 fw-bold fs-5'>Enfant</li></Link>
                         <Link className='link-style' to="/accessoires" ><li className='nav-link mx-3 fw-bold fs-5'>Accessoires</li></Link>
+                        {isAuthenticated && role == 'admin' && (
+                            <Link className='link-style' to="/admin"><li className='nav-link mx-3 fw-bold fs-5' >Admin Panel</li></Link>
+                        )}
                     </div>
                     <div className='d-flex justify-content-end align-items-center'>
                         <li className='nav-link'>
@@ -42,7 +57,7 @@ export default function Navbar() {
                         <li className='nav-link mx-1'>
                             <AiOutlineHeart className='icon' />
                         </li>
-                        <li className='nav-link mx-1'>
+                        <li className='nav-link mx-1' onClick={toggleProfileModal} >
                             <FaUser className='icon' />
                         </li>
                         <li className='nav-link mx-1'>
@@ -54,6 +69,7 @@ export default function Navbar() {
             <nav>
                 <h3 className='bg-dark text-white text-center ' >{`${title[currentState]}`}</h3>
             </nav>
+            {isProfileModalOpen && isAuthenticated && <Profile onClose={closeProfileModal} />}
         </div>
     );
 }
