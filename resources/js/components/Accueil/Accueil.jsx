@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './Accueil.css'
 // -------------------------------------------------------------
-import img1 from './images/SlideImages/img1.png'
+import img1 from './images/SlideImages/img1.jpg'
 import img2 from './images/SlideImages/img2.png'
-import img3 from './images/SlideImages/img3.png'
+import img3 from './images/SlideImages/img3.jpg'
 // -------------------------------------------------------------
 import accessoires from './images/Categories/accessoires.png'
 import enfant from './images/Categories/kids.png'

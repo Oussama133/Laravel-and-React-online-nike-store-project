@@ -8,6 +8,7 @@ import Femme from './Categories/Femme/Femme';
 import Enfant from './Categories/Enfant/Enfant';
 import Accessoires from './Categories/Accessoires/Accessoires';
 import Accueil from './Accueil/Accueil';
+import Footer from './Footer/Footer';
 
 export default function Home() {
     const location = useLocation();
@@ -30,13 +31,17 @@ export default function Home() {
                         <Route path="/login" element={<Login />} />
                     </>
                 )}
-                    <Route path='/' element={<Accueil />} />
-                    <Route path='/homme' element={<Homme />} />
-                    <Route path='femme' element={<Femme />} />
-                    <Route path='/enfant' element={<Enfant />} />
-                    <Route path='/accessoires' element={<Accessoires />} />
+                <Route path='/' element={<Accueil />} />
+                <Route path='/homme' element={<Homme />} />
+                <Route path='femme' element={<Femme />} />
+                <Route path='/enfant' element={<Enfant />} />
+                <Route path='/accessoires' element={<Accessoires />} />
 
             </Routes>
+            
+            <footer className='mt-5' >
+                <Footer />
+            </footer>
         </div>
     );
 }
