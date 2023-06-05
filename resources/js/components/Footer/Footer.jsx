@@ -13,30 +13,30 @@ const Footer = () => {
           <Col md={3} sm={6}>
             <h5>À PROPOS DE NIKE</h5>
             <ul className="list-unstyled">
-              <li><Link to  ="#">Actualités</Link></li>
-              <li><Link to="#">Carrières</Link></li>
-              <li><Link to="#">Investisseurs</Link></li>
-              <li><Link to="#">Développement durable</Link></li>
+              <li><Link to ="https://news.nike.com/">Actualités</Link></li>
+              <li><Link to="https://jobs.nike.com/">Carrières</Link></li>
+              <li><Link to="https://investors.nike.com/">Investisseurs</Link></li>
+              <li><Link to="https://www.nike.com/fr/developpement-durable">Développement durable</Link></li>
             </ul>
           </Col>
           <Col md={3} sm={6}>
             <h5>AIDE</h5>
             <ul className="list-unstyled">
               <li><Link to="#">Statut de commande</Link></li>
-              <li><Link to="#">Expédition et livraison</Link></li>
-              <li><Link to="#">Retours</Link></li>
-              <li><Link to="#">Modes de paiement</Link></li>
-              <li><Link to="#">Nous contacter</Link></li>
-              <li><Link to="#">Aide - Codes promo Nike</Link></li>
+              <li><Link to="https://www.nike.com/fr/help/a/expedition-livraison-ue">Expédition et livraison</Link></li>
+              <li><Link to="https://www.nike.com/fr/help/a/conditions-de-retour-ue">Retours</Link></li>
+              <li><Link to="https://www.nike.com/fr/help/a/modes-de-paiement-ue">Modes de paiement</Link></li>
+              <li><Link to="https://www.nike.com/fr/help/#contact">Nous contacter</Link></li>
+              <li><Link to="https://www.nike.com/fr/help/a/appliquer-promo-ue">Aide - Codes promo Nike</Link></li>
             </ul>
           </Col>
           <Col md={3} sm={6}>
             <h5>REJOINS-NOUS</h5>
             <ul className="list-unstyled">
-              <li><Link to="#">Nike App</Link></li>
-              <li><Link to="#">Nike Run Club</Link></li>
-              <li><Link to="#">Nike Training Club</Link></li>
-              <li><Link to="#">SNKRS</Link></li>
+              <li><Link to="https://www.nike.com/fr/nike-app">Nike App</Link></li>
+              <li><Link to="https://www.nike.com/fr/nrc-app">Nike Run Club</Link></li>
+              <li><Link to="https://www.nike.com/fr/ntc-app">Nike Training Club</Link></li>
+              <li><Link to="https://www.nike.com/fr/launch">SNKRS</Link></li>
             </ul>
           </Col>
           <Col md={3} sm={6}>
@@ -75,7 +75,7 @@ const Footer = () => {
           </Col>
 
           <Col md={3}>
-            <Link to="#" className="text-right hover">
+            <Link to="https://www.nike.com/fr/#cookie_settings" className="text-right hover">
               Paramètres des cookies
             </Link>
           </Col>

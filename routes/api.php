@@ -24,4 +24,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('delete',[ProfileController::class,'deleteProfile']);
     Route::post('update',[ProfileController::class,'update']);
     Route::post('update-password',[ProfileController::class,'updatePassword']);
+
+    Route::group(['middleware'=>['admin']],function(){
+        //every function route that you want only the admin to use
+    });
 });
