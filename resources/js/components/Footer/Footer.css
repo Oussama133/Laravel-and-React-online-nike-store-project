@@ -1,7 +1,7 @@
 .footer {
     background-color: #000;
     color: #fff;
-    padding: 40px 0;
+    padding: 25px 0;
 }
 
 .footer h5 {
@@ -21,7 +21,7 @@
     text-decoration: none;
     padding-bottom: 5px;
     line-height: 1.8;
-    font-size: 20px;
+    font-size: 16px;
 
 }
 
@@ -72,5 +72,12 @@ span {
 .location {
     width: 38px;
     position: relative;
-    top: -2px;
+    top: -3px;
+}
+
+.maroc{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding-right: 10px;
 }

@@ -49,7 +49,9 @@ const Footer = () => {
 
          
             </ul>
+            <Link to="/">
             <img src={nikeFooter} alt="My Image" className="d-flex justify-content-end mx-auto mt-5 myImage" />
+            </Link>
           </Col>
 
         </Row>
@@ -61,8 +63,9 @@ const Footer = () => {
           <Col md={5} className="text-left myColClass">
             <Link to="#">
               <img src={location} alt="My Image" className="location" />
+              <span className="maroc">Kenitra</span>
             </Link>
-            <span> <Link to="" className="hover">&copy; 2023 Nike Maroc, Inc. Tous droits réservés</Link></span>
+            <span> &copy; 2023 Nike Maroc, Inc. Tous droits réservés</span>
           </Col>
 
           <Col md={4}>

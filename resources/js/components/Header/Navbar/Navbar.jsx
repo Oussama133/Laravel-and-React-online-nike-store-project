@@ -20,12 +20,12 @@ export default function Navbar() {
     }
 // --------------------------------------------------------------------------------------------------
 
-    const title = ["Livraison et retours gratuits", "-25 % POUR L'ACHAT DE DEUX ARTICLES OU PLUS"];
+    const title = ["Livraison et retours gratuits", "-25 % Pour l'achat de deux articles ou plus","Réduction étudiante"];
     const [currentState , setCurrentState] = useState(0)
     useEffect (()=>{
         const intervalId = setInterval(()=>{
             setCurrentState((currentState+1)%title.length);
-        },2000);
+        },2500);
         return ()=> clearInterval(intervalId);
     },[currentState])
 
@@ -64,7 +64,7 @@ export default function Navbar() {
                 </div>
             </nav>
             <nav>
-                <h3 className='bg-dark text-white text-center ' >{`${title[currentState]}`}</h3>
+                <h3 className='text-white text-center slider' >{`${title[currentState]}`}</h3>
             </nav>
             {isProfileModalOpen && isAuthenticated && <Profile onClose={closeProfileModal} />}
         </div>

@@ -71,8 +71,10 @@ export default function Accueil() {
                                 <div className="card">
                                     <img src={shoe1} className='card-img-top' />
                                     <div className="card-body">
+                                        <h6 className="card-status text-danger status">Best Seller</h6>
                                         <h5 className="card-title">Air Jordan 1 Retro High</h5>
                                         <p className="card-text">Chaussures pour hommes</p>
+                                        <p className="card-text "> 789 DH</p>
                                     </div>
                                 </div>
                             </div>
@@ -80,9 +82,11 @@ export default function Accueil() {
                             <div className="col-sm-3">
                                 <div className="card">
                                     <img src={shoe2} className='card-img-top' />
-                                    <div className="card-body">
+                                    <div className="card-body ">
+                                        <h6 className="card-status text-danger status">Just Now</h6>
                                         <h5 className="card-title">Nike Air Max Plus</h5>
                                         <p className="card-text">Chaussures pour hommes</p>
+                                        <p className="card-text "> 1489 DH</p>
                                     </div>
                                 </div>
                             </div>
@@ -91,8 +95,10 @@ export default function Accueil() {
                                 <div className="card">
                                     <img src={shoe3} className='card-img-top' />
                                     <div className="card-body">
+                                        <h6 className="card-status text-danger status">Best Seller</h6>
                                         <h5 className="card-title">VaporMax 2023 Flyknit</h5>
                                         <p className="card-text">Chaussures de femme</p>
+                                        <p className="card-text "> 989 DH</p>
                                     </div>
                                 </div>
                             </div>
@@ -101,8 +107,10 @@ export default function Accueil() {
                                 <div className="card">
                                     <img src={shoe4} className='card-img-top' />
                                     <div className="card-body">
+                                        <h6 className="card-status text-danger status">&nbsp;</h6>
                                         <h5 className="card-title">Nike Air Max 97</h5>
                                         <p className="card-text">Chaussures de femme</p>
+                                        <p className="card-text "> 1050 DH</p>
                                     </div>
                                 </div>
                             </div>
