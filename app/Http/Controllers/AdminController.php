@@ -37,4 +37,23 @@ class AdminController extends Controller
             ]);
         }
     }
+
+    public function FetchUsers()
+    {
+        $users = User::all();
+
+        // Prepare an array with the desired attributes of each user
+        $data = [];
+        foreach ($users as $user) {
+            $data[] = [
+                'nom' => $user->nom,
+                'prenom' => $user->prenom,
+                'email' => $user->email,
+                'role' => $user->role
+            ];
+        }
+
+        // Return a JSON response with the prepared data
+        return response()->json($data);
+    }
 }

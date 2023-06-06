@@ -29,5 +29,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::group(['middleware'=>['admin']],function(){
         //every function route that you want only the admin to use
         Route::post('add',[AdminController::class,'AddUser']);
+        Route::get('fetch-users',[AdminController::class,'FetchUsers']);
     });
 });
