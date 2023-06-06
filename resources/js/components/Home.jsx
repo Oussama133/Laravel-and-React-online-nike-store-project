@@ -8,12 +8,8 @@ import Femme from './Categories/Femme/Femme';
 import Enfant from './Categories/Enfant/Enfant';
 import Accessoires from './Categories/Accessoires/Accessoires';
 import Accueil from './Accueil/Accueil';
-<<<<<<< HEAD
-import Footer from './Footer/Footer';
-=======
+import Footer from './Footer/Footer'; // Resolved conflict here
 import Admin from './admin/admin';
->>>>>>> c9da36806730edd615853679f5f6e36337a2bef0
-
 export default function Home() {
     const location = useLocation();
     const hideNav = location.pathname === '/login' || location.pathname === '/register';
@@ -42,19 +38,18 @@ export default function Home() {
                 <Route path='femme' element={<Femme />} />
                 <Route path='/enfant' element={<Enfant />} />
                 <Route path='/accessoires' element={<Accessoires />} />
-<<<<<<< HEAD
-=======
-                
+
+
+
                 {isAdmin ? (
                     <Route path="/admin" element={<Admin />} />
                 ) : (
                     // Redirect to another page or show an access denied message
                     <Route path="/admin" element={<Navigate to="/" replace />} />
                 )}
->>>>>>> c9da36806730edd615853679f5f6e36337a2bef0
 
             </Routes>
-            
+
             <footer className='mt-5' >
                 <Footer />
             </footer>
