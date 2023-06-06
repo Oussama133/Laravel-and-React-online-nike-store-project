@@ -12,19 +12,19 @@ export default function Sidebar() {
             <div className="container-fluid">
                 <div className="sidebar d-flex flex-column align-items-start">
                     <h3 className="link-style text-white text-center my-3">Bonjour Oussama</h3>
-                    <Link to="dashboard" className="link-style text-white my-2">
+                    <Link to="dashboard" className="b link-style text-white my-2">
                         <MdDashboardCustomize />  Dashboard
                     </Link>
-                    <Link to="users" className=" link-style text-white my-2">
+                    <Link to="users" className="b link-style text-white my-2">
                         <FiUsers />  Users
                     </Link>
-                    <Link to="add-user" className=" link-style text-white my-2">
+                    <Link to="add-user" className="b link-style text-white my-2">
                         <AiOutlineUserSwitch />  Add User
                     </Link>
-                    <Link to="products" className="link-style text-white my-2">
+                    <Link to="products" className="b link-style text-white my-2">
                         <TbPackages />  Products
                     </Link>
-                    <Link to="add-product" className="link-style text-white my-2">
+                    <Link to="add-product" className="b link-style text-white my-2">
                         <FiPackage />  Add Products
                     </Link>
                 </div>
