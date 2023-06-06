@@ -1,0 +1,83 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 25px 0;
+}
+
+.footer h5 {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    padding-bottom: 5px;
+    line-height: 1.8;
+    font-size: 16px;
+
+}
+
+.footer ul li a:hover {
+    color: #fff;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li:last-child {
+    margin-right: 0;
+}
+
+.social-icons a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 36px;
+    /* Adjust the font size to make the icons bigger */
+}
+
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+.myImage {
+    width: 200px;
+    height: auto;
+}
+
+.links,
+a,
+span {
+    color: #ccc;
+    text-decoration: none;
+    padding-bottom: 5px;
+    font-size: 12px;
+
+}
+
+.links_,.hover:hover {
+    color: #fff;
+}
+
+.location {
+    width: 38px;
+    position: relative;
+    top: -3px;
+}
+
+.maroc{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding-right: 10px;
+}

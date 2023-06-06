@@ -15,6 +15,8 @@ import UsersList from './Admin/Users/UsersList/UsersList';
 import Dashboard from './Admin/Dashboard/Dashboard';
 import ProductsList from './Admin/Products/ProductsList/ProductsList';
 import AddProduct from './Admin/Products/AddProduct/AddProduct';
+import Footer from './Footer/Footer';
+import Admin from './admin/admin';
 
 export default function Home() {
     const location = useLocation();
@@ -45,6 +47,7 @@ export default function Home() {
                 <Route path='/enfant' element={<Enfant />} />
                 <Route path='/accessoires' element={<Accessoires />} />
 
+
                 {isAdmin ? (
                     <Route path="/admin" element={<Admin />}>
                         <Route path='dashboard' element={<Dashboard/>} />
@@ -59,6 +62,10 @@ export default function Home() {
                 )}
 
             </Routes>
+
+            <footer className='mt-5' >
+                <Footer />
+            </footer>
         </div>
     );
 }

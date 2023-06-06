@@ -6,4 +6,8 @@
 }
 .card {
     z-index: -1;
+    border: none;
+}
+.card-body{
+    padding-left: 0;
 }
