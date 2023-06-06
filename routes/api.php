@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
@@ -27,5 +28,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     Route::group(['middleware'=>['admin']],function(){
         //every function route that you want only the admin to use
+        Route::post('add',[AdminController::class,'AddUser']);
     });
 });

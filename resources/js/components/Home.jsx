@@ -8,7 +8,13 @@ import Femme from './Categories/Femme/Femme';
 import Enfant from './Categories/Enfant/Enfant';
 import Accessoires from './Categories/Accessoires/Accessoires';
 import Accueil from './Accueil/Accueil';
+//-----------------------------------------------------------------
 import Admin from './admin/admin';
+import AddUsers from './Admin/Users/AddUsers/AddUsers';
+import UsersList from './Admin/Users/UsersList/UsersList';
+import Dashboard from './Admin/Dashboard/Dashboard';
+import ProductsList from './Admin/Products/ProductsList/ProductsList';
+import AddProduct from './Admin/Products/AddProduct/AddProduct';
 
 export default function Home() {
     const location = useLocation();
@@ -38,9 +44,15 @@ export default function Home() {
                 <Route path='femme' element={<Femme />} />
                 <Route path='/enfant' element={<Enfant />} />
                 <Route path='/accessoires' element={<Accessoires />} />
-                
+
                 {isAdmin ? (
-                    <Route path="/admin" element={<Admin />} />
+                    <Route path="/admin" element={<Admin />}>
+                        <Route path='dashboard' element={<Dashboard/>} />
+                        <Route path='users' element={<UsersList/>} />
+                        <Route path='add-user' element={<AddUsers/>} />
+                        <Route path='products' element={<ProductsList/>} />
+                        <Route path='add-product' element={<AddProduct/>} />
+                    </Route>
                 ) : (
                     // Redirect to another page or show an access denied message
                     <Route path="/admin" element={<Navigate to="/" replace />} />
