@@ -8,13 +8,13 @@ import Femme from './Categories/Femme/Femme';
 import Enfant from './Categories/Enfant/Enfant';
 import Accessoires from './Categories/Accessoires/Accessoires';
 import Accueil from './Accueil/Accueil';
+import Footer from './Footer/Footer';
 //-----------------------------------------------------------------
 import AddUsers from './Admin/Users/AddUsers/AddUsers';
 import UsersList from './Admin/Users/UsersList/UsersList';
 import Dashboard from './Admin/Dashboard/Dashboard';
 import ProductsList from './Admin/Products/ProductsList/ProductsList';
 import AddProduct from './Admin/Products/AddProduct/AddProduct';
-import Footer from './Footer/Footer';
 import Admin from './Admin/Admin';
 
 export default function Home() {
