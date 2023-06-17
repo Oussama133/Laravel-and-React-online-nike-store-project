@@ -8,14 +8,15 @@ import Femme from './Categories/Femme/Femme';
 import Enfant from './Categories/Enfant/Enfant';
 import Accessoires from './Categories/Accessoires/Accessoires';
 import Accueil from './Accueil/Accueil';
-import Footer from './Footer/Footer';
-//-----------------------------------------------------------------
+import Footer from './Footer/Footer'; // Resolved conflict here
+import Admin from './admin/admin';
+
 import AddUsers from './Admin/Users/AddUsers/AddUsers';
 import UsersList from './Admin/Users/UsersList/UsersList';
 import Dashboard from './Admin/Dashboard/Dashboard';
 import ProductsList from './Admin/Products/ProductsList/ProductsList';
 import AddProduct from './Admin/Products/AddProduct/AddProduct';
-import Admin from './Admin/Admin';
+    
 
 export default function Home() {
     const location = useLocation();
@@ -46,6 +47,8 @@ export default function Home() {
                 <Route path='femme' element={<Femme />} />
                 <Route path='/enfant' element={<Enfant />} />
                 <Route path='/accessoires' element={<Accessoires />} />
+
+
 
 
                 {isAdmin ? (
