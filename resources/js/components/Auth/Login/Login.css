@@ -1,0 +1,62 @@
+.logo {
+    position: relative;
+    margin: 0 auto;
+    top: -20px;
+}
+.form-container {
+    padding: 20px;
+    max-width: 500px;
+    max-height: 650px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    background-color: #111111;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+.button:hover {
+  border: 2px solid black;
+  padding: 10.2px 18px;
+
+  color: #000000;
+  background-color: #ffffff;
+  }
+  
+
+
+.email,
+input[type="prenom"],
+input[type="nom"],
+input[type="password"] {
+  background-color: #F5F5F5;
+}
+
+
+
+.outline {
+  border: 2px solid black;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  background-color: transparent;
+}
+.outline:hover {
+  color: #ffffff;
+  background-color: #000000;
+
+}
+footer{
+  display: nono;
+}

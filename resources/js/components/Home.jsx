@@ -10,6 +10,15 @@ import Accessoires from './Categories/Accessoires/Accessoires';
 import Accueil from './Accueil/Accueil';
 import Footer from './Footer/Footer'; // Resolved conflict here
 import Admin from './admin/admin';
+
+//-----------------------------------------------------------------
+import AddUsers from './Admin/Users/AddUsers/AddUsers';
+import UsersList from './Admin/Users/UsersList/UsersList';
+import Dashboard from './Admin/Dashboard/Dashboard';
+import ProductsList from './Admin/Products/ProductsList/ProductsList';
+import AddProduct from './Admin/Products/AddProduct/AddProduct';
+    
+
 export default function Home() {
     const location = useLocation();
     const hideNav = location.pathname === '/login' || location.pathname === '/register';
@@ -41,8 +50,15 @@ export default function Home() {
 
 
 
+
                 {isAdmin ? (
-                    <Route path="/admin" element={<Admin />} />
+                    <Route path="/admin" element={<Admin />}>
+                        <Route path='dashboard' element={<Dashboard/>} />
+                        <Route path='users' element={<UsersList/>} />
+                        <Route path='add-user' element={<AddUsers/>} />
+                        <Route path='products' element={<ProductsList/>} />
+                        <Route path='add-product' element={<AddProduct/>} />
+                    </Route>
                 ) : (
                     // Redirect to another page or show an access denied message
                     <Route path="/admin" element={<Navigate to="/" replace />} />

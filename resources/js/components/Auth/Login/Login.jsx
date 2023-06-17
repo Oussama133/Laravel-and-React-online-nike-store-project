@@ -1,8 +1,9 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import logo from '../Register/logo.png'
-import '../Register/Register.css'
+import './Login.css'
 import { Link, useNavigate } from 'react-router-dom'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 export default function Login() {
 
     const navigate = useNavigate();
@@ -31,7 +32,7 @@ export default function Login() {
                 if (res.data.status === 200) {
                     localStorage.setItem('auth_token', res.data.token);
                     localStorage.setItem('auth_name', res.data.username);
-                    localStorage.setItem('auth_role',res.data.role)
+                    localStorage.setItem('auth_role', res.data.role)
                     swal("Success", res.data.message, "success")
                     if (res.data.role == 'admin') {
                         navigate('/admin')
@@ -54,22 +55,27 @@ export default function Login() {
             <form className='form-container mt-5' onSubmit={loginSubmit} >
                 <Link to='/' ><img src={logo} className='logo d-flex justify-content-center' /></Link>
                 <h2>Entrez votre email pour nous rejoindre ou connectez-vous.</h2>
-                <p className='p' >Maroc</p>
-                <div className='form-group' >
-                    <label htmlFor="email">Adresse E-mail* :</label>
-                    <input type="email" className='form-control' name='email' placeholder='E-mail'
-                    value={loginInput.email} onChange={handleInput} />
-                    <span style={{'color':'red'}} >{loginInput.error_list.email}</span>
+                <div className='form-group mt-3' >
+                    <label htmlFor="email" className='mb-2'>Adresse E-mail</label>
+                    <input type="email" className='form-control email' name='email' placeholder='E-mail'
+                        value={loginInput.email} onChange={handleInput} />
+                    <span style={{ 'color': 'red' }} >{loginInput.error_list.email}</span>
                 </div>
-                <div className='form-group' >
-                    <label htmlFor="password">Password* :</label>
-                    <input type="password" className='form-control' name='password' placeholder='Password'
-                     value={loginInput.password} onChange={handleInput} />
-                     <span style={{'color':'red'}} >{loginInput.error_list.password}</span>
+                <div className='fµorm-group mt-3' >
+                    <label htmlFor="password" className='mb-2'>Mode de passe</label>
+                    <input type="password" className='form-control' name='password' placeholder='Mode de passe'
+                        value={loginInput.password} onChange={handleInput} />
+                    <span style={{ 'color': 'red' }} >{loginInput.error_list.password}</span>
                 </div><br />
-                <p className='p' >En continuant j'accepte <Link to='/policy' ><span style={{ textDecoration: "underline" }} >la politique de confidentialité </span></Link>
-                    et <Link to='/condition' ><span style={{ textDecoration: "underline" }} >les conditions d'utilisation</span></Link>de Nike .</p>
-                <button type='submit' className='btn btn-dark float-end mt-3 rounded' >Continue</button>
+                <p class="small fw-bold pt-1 mb-0">Don't have an account?</p>
+                <div class="text-center text-lg-start mt-2 pt-2">
+                    <Link to='/register'>
+                        <button type="button" class="outline float-start">Créer un compte
+                        </button>
+                    </Link>
+                    <button type='submit' className='button float-end' >Continue</button>
+
+                </div>
             </form>
         </div>
     )
