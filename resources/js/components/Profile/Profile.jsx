@@ -193,7 +193,6 @@ export default function Profile({ onClose }) {
                     </div>
 
                     <h6 className='text-center text-danger mt-5 delete' onClick={deleteAccount} ><FaTrashAlt/> Supprimer le compte</h6>
-
                 </form>
             </div>
         </div>

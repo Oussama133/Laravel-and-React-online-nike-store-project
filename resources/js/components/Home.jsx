@@ -11,7 +11,6 @@ import Accueil from './Accueil/Accueil';
 import Footer from './Footer/Footer'; // Resolved conflict here
 import Admin from './admin/admin';
 
-//-----------------------------------------------------------------
 import AddUsers from './Admin/Users/AddUsers/AddUsers';
 import UsersList from './Admin/Users/UsersList/UsersList';
 import Dashboard from './Admin/Dashboard/Dashboard';

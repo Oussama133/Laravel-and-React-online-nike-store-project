@@ -57,7 +57,7 @@ export default function Navbar({role}) {
                         <li className='nav-link mx-1'>
                             <AiOutlineHeart className='icon' />
                         </li>
-                        <li className='nav-link mx-1' onClick={toggleProfileModal} >
+                        <li style={{cursor : 'pointer'}} className='nav-link mx-1' onClick={toggleProfileModal} >
                             <FaUser className='icon' />
                         </li>
                         <li className='nav-link mx-1'>
