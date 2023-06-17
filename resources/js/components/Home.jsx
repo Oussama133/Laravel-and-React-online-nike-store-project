@@ -20,6 +20,7 @@ import Admin from './Admin/Admin';
 export default function Home() {
     const location = useLocation();
     const hideNav = location.pathname === '/login' || location.pathname === '/register';
+    const hideFooter = location.pathname === '/login' || location.pathname === '/register';
     const isAuthenticated = !!localStorage.getItem('auth_token');
     const role = localStorage.getItem('auth_role');
     const isAdmin = role === 'admin'
@@ -49,11 +50,11 @@ export default function Home() {
 
                 {isAdmin ? (
                     <Route path="/admin" element={<Admin />}>
-                        <Route path='dashboard' element={<Dashboard/>} />
-                        <Route path='users' element={<UsersList/>} />
-                        <Route path='add-user' element={<AddUsers/>} />
-                        <Route path='products' element={<ProductsList/>} />
-                        <Route path='add-product' element={<AddProduct/>} />
+                        <Route path='dashboard' element={<Dashboard />} />
+                        <Route path='users' element={<UsersList />} />
+                        <Route path='add-user' element={<AddUsers />} />
+                        <Route path='products' element={<ProductsList />} />
+                        <Route path='add-product' element={<AddProduct />} />
                     </Route>
                 ) : (
                     // Redirect to another page or show an access denied message
@@ -62,9 +63,11 @@ export default function Home() {
 
             </Routes>
 
-            <footer className='mt-5' >
-                <Footer />
-            </footer>
+            {!hideFooter && (
+                <footer className='mt-5' >
+                    <Footer />
+                </footer>
+            )}
         </div>
     );
 }

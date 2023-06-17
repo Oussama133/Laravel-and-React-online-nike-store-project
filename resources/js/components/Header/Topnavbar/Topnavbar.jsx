@@ -21,7 +21,7 @@ export default function Topnavbar() {
 
     const logoutSubmit = (e) => {
         e.preventDefault();
-        axios.post('api/logout').then(res => {
+        axios.post('http://127.0.0.1:8000/api/logout').then(res => {
             if (res.data.status === 200) {
                 localStorage.removeItem('auth_token');
                 localStorage.removeItem('auth_name');
