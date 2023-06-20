@@ -21,6 +21,7 @@ use App\Http\Controllers\ProfileController;
 
 Route::post('register', [AuthController::class , 'register']);
 Route::post('login', [AuthController::class , 'login']);
+
 Route::post('/store', [AjouterProduitController::class, 'store']);
 
 Route::put('/update/{id}', [AjouterProduitController::class, 'update']);
@@ -57,13 +58,14 @@ Route::get('/indexproduct4', [AjouterImageProduitController::class, 'indexproduc
 Route::get('/indeximages', [ImagesproductController::class, 'indeximages']);
 Route::get('/createimage', [ImagesproductController::class, 'createimages']);
 Route::post('/storeimages', [ ImagesproductController::class, 'storeimages']);
+
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('logout',[AuthController::class ,'logout']);
     Route::get('show',[ProfileController::class,'show']);
     Route::post('delete',[ProfileController::class,'deleteProfile']);
     Route::post('update',[ProfileController::class,'update']);
     Route::post('update-password',[ProfileController::class,'updatePassword']);
-    
+
      // \controllerImagesproductController
     Route::group(['middleware'=>['admin']],function(){
         //every function route that you want only the admin to use

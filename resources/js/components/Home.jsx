@@ -19,7 +19,7 @@ import ProductsList from './Admin/Products/ProductsList/ProductsList';
 import AddProduct from './Admin/Products/AddProduct/AddProduct';
 import AjouterImage from './Admin/AjouterImageproduct/AjouterIamge';
 import ImagesProduct from './Admin/ListImagesProduct/ImagesProduct';
-// page de les images dans l'url// 
+// page de les images dans l'url//
 import ListProduct from './Admin/AjouterImageproduct/IndexImages/ListProduct';
 import Indeximage2 from './Admin/AjouterImageproduct/IndexImages/Indeximage2';
 import Indeximage3 from './Admin/AjouterImageproduct/IndexImages/Indeximage3';
@@ -70,7 +70,7 @@ export default function Home() {
                 <Route path='/accessoires' element={<Accessoires />} />
                 <Route path='/add-product' element={<AddProduct />} />
                 <Route path='products' element={<ProductsList />} />
-                <Route path='ajouterImage' element={<AjouterImage />} />
+                <Route path='ajouterImage' element={<AjouterImage />}/>
                 <Route path='ProductsList' element={<ListProduct/>} />
                 <Route path='imagesproduct' element={<ImagesProduct/>} />
                 <Route path='indeximage2' element={<Indeximage2/>} />
@@ -88,7 +88,7 @@ export default function Home() {
                 <Route path='indeximage14' element={<Indeximage14/>} />
                 <Route path='indeximage15' element={<Indeximage15/>} />
                 <Route path='indeximage16' element={<Indeximage16/>} />
-                
+
 
 
 
@@ -98,7 +98,7 @@ export default function Home() {
                         <Route path='users' element={<UsersList />} />
                         <Route path='add-user' element={<AddUsers />} />
                         <Route path='products' element={<ProductsList />} />
-                        
+
                     </Route>
                 ) : (
                     // Redirect to another page or show an access denied message
