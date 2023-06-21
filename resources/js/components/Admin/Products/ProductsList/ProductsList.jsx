@@ -38,7 +38,6 @@ async function getData(){
               <div className="card-body">
                 <h6 className="card-status text-danger status">{item.titre}</h6>
                 <h5 className="card-title">{item.soustitre}</h5>
-                <p className="card-text">{item.description}</p>
                 <p className="card-text">{item.prix}</p>
                
                 {/* <div className="card-text"><button  class="btn btn-danger" onClick={()=>deleteOperation(item.id)}>delete</button></div> */}
