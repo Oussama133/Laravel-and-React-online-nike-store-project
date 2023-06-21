@@ -13,20 +13,21 @@ export default function ProductsList() {
   ];
   useEffect(() => {
     getData();
-      
+
   }, [])
-  async function deleteOperation(id){
-let result= await fetch("http://localhost:8000/api/delete/"+id,{
-method:"DELETE"});
-result=result.json();
-console.warn(result);
-getData();
-}
-async function getData(){
-  const response = await fetch("http://localhost:8000/api/index");
-  const result = await response.json();
-  setData(result);
-} 
+  async function deleteOperation(id) {
+    let result = await fetch("http://localhost:8000/api/delete/" + id, {
+      method: "DELETE"
+    });
+    result = result.json();
+    console.warn(result);
+    getData();
+  }
+  async function getData() {
+    const response = await fetch("http://localhost:8000/api/index");
+    const result = await response.json();
+    setData(result);
+  }
   return (
     <div>
       <div className="row">
@@ -38,25 +39,25 @@ async function getData(){
               <div className="card-body">
                 <h6 className="card-status text-danger status">{item.titre}</h6>
                 <h5 className="card-title">{item.soustitre}</h5>
-                <p className="card-text">{item.prix}</p>
-               
+                {/* <p className="card-text">{item.prix}</p> */}
+
                 {/* <div className="card-text"><button  class="btn btn-danger" onClick={()=>deleteOperation(item.id)}>delete</button></div> */}
-              {/* <a  href={"update/"+item.id}>update</a> */}
+                {/* <a  href={"update/"+item.id}>update</a> */}
               </div>
             </div>
           </div>
         ))}
       </div>
       <div className="row">
-      {categories1.map((category, index) => (
-           <div className="col-sm-3 d-flex align-items-center justify-content-center mt-3 d fs-2"  >
+        {categories1.map((category, index) => (
+          <div className="col-sm-3 d-flex align-items-center justify-content-center mt-3 d fs-2"  >
             <Link to={category.link}>
               <button>{category.name}</button>
             </Link>
-            
+
           </div>
         ))}
-      
+
       </div>
     </div>
   );
