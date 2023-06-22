@@ -29,8 +29,6 @@ export default function Homme() {
   }
   return (
     <div>
-
-
       <div className="container cards">
         <div className="scroll-container">
         <h6 className='counting text-danger ml-3'>{categories1.length} produits affiches</h6>

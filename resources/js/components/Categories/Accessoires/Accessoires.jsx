@@ -26,37 +26,31 @@ async function getData(){
 } 
   return (
     <div>
-      <div className="row">
-        {data.map((item) => (
-          <div className="col-sm-3" key={item.id}>
-            <div className="card">
-              <img src={"http://localhost:8000/" + item.path} alt={item.titre} />
-
-              <div className="card-body">
-                <h6 className="card-status text-danger status">{item.titre}</h6>
-                <h5 className="card-title">{item.soustitre}</h5>
-                <p className="card-text">{item.description}</p>
-                <p className="card-text">{item.prix}</p>
-               
-                {/* <div className="card-text"><button  class="btn btn-danger" onClick={()=>deleteOperation(item.id)}>delete</button></div> */}
-              {/* <a  href={"update/"+item.id}>update</a> */}
+      <div className="container cards">
+        <div className="scroll-container">
+        <h6 className='counting text-danger ml-3'>{categories1.length} produits affiches</h6>
+        <div className="row">
+                {data.map((item) => (
+                  <div className="col-sm-4" key={item.id}>
+                    <Link to={`http://127.0.0.1:8000/indeximage${item.id}`}>
+                      <div className="card">
+                        <img src={"http://localhost:8000/" + item.path} alt={item.titre} />
+                        <div className="card-body bodyCard">
+                        <h6 className="card-status text-danger">{item.offers}</h6>
+                          <h6 className="card-status titre">{item.titre}</h6>
+                          <h5 className="card-title soustitre">{item.soustitre}</h5>
+                          <p className="card-text prix">{item.prix} DH</p>
+                        </div>
+                  </div>
+                    </Link>
               </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="row">
-      {categories1.map((category, index) => (
-           <div className="col-sm-3 d-flex align-items-center justify-content-center mt-3 d fs-2"  >
-            <a href={category.link}>
-              <button>{category.name}</button>
-            </a>
-            
-          </div>
-        ))}
-      
+            ))}
+
+        </div>
+
       </div>
     </div>
+    </div >
   );
 }
 
