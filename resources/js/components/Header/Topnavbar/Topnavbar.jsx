@@ -9,7 +9,7 @@ import Contact from '../../Contact-Us/Contact'
 
 export default function Topnavbar() {
 
-    const [isContactModalOpen , setIsContactModalOpen] = useState(false);
+    const [isContactModalOpen, setIsContactModalOpen] = useState(false);
     const toggleContactModal = () => {
         setIsContactModalOpen(!isContactModalOpen)
     }

@@ -37,7 +37,7 @@ import Indeximage14 from './Admin/AjouterImageproduct/IndexImages/Indeximage14';
 import Indeximage15 from './Admin/AjouterImageproduct/IndexImages/Indeximage15';
 import Indeximage16 from './Admin/AjouterImageproduct/IndexImages/Indeximage16';
 
-    
+
 
 export default function Home() {
     const location = useLocation();
@@ -70,24 +70,24 @@ export default function Home() {
                 <Route path='/accessoires' element={<Accessoires />} />
                 <Route path='/add-product' element={<AddProduct />} />
                 <Route path='products' element={<ProductsList />} />
-                <Route path='ajouterImage' element={<AjouterImage />}/>
-                <Route path='ProductsList' element={<ListProduct/>} />
-                <Route path='imagesproduct' element={<ImagesProduct/>} />
-                <Route path='indeximage2' element={<Indeximage2/>} />
-                <Route path='indeximage3' element={<Indeximage3/>} />
-                <Route path='indeximage4' element={<Indeximage4/>} />
-                <Route path='indeximage5' element={<Indeximage5/>} />
-                <Route path='indeximage6' element={<Indeximage6/>} />
-                <Route path='indeximage7' element={<Indeximage7/>} />
-                <Route path='indeximage8' element={<Indeximage8/>} />
-                <Route path='indeximage9' element={<Indeximage9/>} />
-                <Route path='indeximage10' element={<Indeximage10/>} />
-                <Route path='indeximage11' element={<Indeximage11/>} />
-                <Route path='indeximage12' element={<Indeximage12/>} />
-                <Route path='indeximage13' element={<Indeximage13/>} />
-                <Route path='indeximage14' element={<Indeximage14/>} />
-                <Route path='indeximage15' element={<Indeximage15/>} />
-                <Route path='indeximage16' element={<Indeximage16/>} />
+                <Route path='ajouterImage' element={<AjouterImage />} />
+                <Route path='ProductsList' element={<ListProduct />} />
+                <Route path='imagesproduct' element={<ImagesProduct />} />
+                <Route path='indeximage2' element={<Indeximage2 />} />
+                <Route path='indeximage3' element={<Indeximage3 />} />
+                <Route path='indeximage4' element={<Indeximage4 />} />
+                <Route path='indeximage5' element={<Indeximage5 />} />
+                <Route path='indeximage6' element={<Indeximage6 />} />
+                <Route path='indeximage7' element={<Indeximage7 />} />
+                <Route path='indeximage8' element={<Indeximage8 />} />
+                <Route path='indeximage9' element={<Indeximage9 />} />
+                <Route path='indeximage10' element={<Indeximage10 />} />
+                <Route path='indeximage11' element={<Indeximage11 />} />
+                <Route path='indeximage12' element={<Indeximage12 />} />
+                <Route path='indeximage13' element={<Indeximage13 />} />
+                <Route path='indeximage14' element={<Indeximage14 />} />
+                <Route path='indeximage15' element={<Indeximage15 />} />
+                <Route path='indeximage16' element={<Indeximage16 />} />
 
 
 

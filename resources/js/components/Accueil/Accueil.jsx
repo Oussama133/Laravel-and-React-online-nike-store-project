@@ -40,30 +40,30 @@ export default function Accueil() {
             <div className='slide-comp' >
                 <img src={`${images[currentState]}`} className='slide' />
             </div>
-{/* ------------------------------------------------------------------------------------------------- */}
+            {/* ------------------------------------------------------------------------------------------------- */}
             <div className='container'>
                 <div className='row'>
-                <div><ImageProductList/></div>
+                    <div><ImageProductList /></div>
                 </div>
             </div>
 
-{/* ----------------------------------------------------------------------------------------------------- */}
+            {/* ----------------------------------------------------------------------------------------------------- */}
             <div>
                 <h2 className='mx-5 my-4' >Le mois de l'Air</h2>
                 <div className="container cards">
                     <div className="scroll-container">
                         <div className="card-deck row">
 
-                        <ProductsList />
-                            
+                            <ProductsList />
 
-                           
+
+
 
                         </div>
                     </div>
                 </div>
             </div>
-{/* ----------------------------------------------------------------------------------------------------- */}
+            {/* ----------------------------------------------------------------------------------------------------- */}
             <div>
                 <h2 className='mx-5 my-4' >Plus d'articles</h2>
                 <div className="container">

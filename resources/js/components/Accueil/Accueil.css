@@ -1,13 +1,13 @@
 .slide {
     max-width: 100%;
 }
-.slide-comp{
+.slide-comp {
     margin-top: -8px;
 }
 .card {
     z-index: -1;
     border: none;
 }
-.card-body{
+.card-body {
     padding-left: 0;
 }

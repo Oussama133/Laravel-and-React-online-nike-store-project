@@ -22,7 +22,6 @@
     padding-bottom: 5px;
     line-height: 1.8;
     font-size: 16px;
-
 }
 
 .footer ul li a:hover {
@@ -45,7 +44,6 @@
     /* Adjust the font size to make the icons bigger */
 }
 
-
 .social-icons a:hover {
     color: #fff;
 }
@@ -62,10 +60,10 @@ span {
     text-decoration: none;
     padding-bottom: 5px;
     font-size: 12px;
-
 }
 
-.links_,.hover:hover {
+.links_,
+.hover:hover {
     color: #fff;
 }
 
@@ -75,7 +73,7 @@ span {
     top: -3px;
 }
 
-.maroc{
+.maroc {
     color: #fff;
     font-size: 16px;
     font-weight: 600;

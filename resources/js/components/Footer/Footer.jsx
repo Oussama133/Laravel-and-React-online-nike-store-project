@@ -13,7 +13,7 @@ const Footer = () => {
           <Col md={3} sm={6}>
             <h5>À PROPOS DE NIKE</h5>
             <ul className="list-unstyled">
-              <li><Link to ="https://news.nike.com/">Actualités</Link></li>
+              <li><Link to="https://news.nike.com/">Actualités</Link></li>
               <li><Link to="https://jobs.nike.com/">Carrières</Link></li>
               <li><Link to="https://investors.nike.com/">Investisseurs</Link></li>
               <li><Link to="https://www.nike.com/fr/developpement-durable">Développement durable</Link></li>
@@ -47,10 +47,10 @@ const Footer = () => {
               <li><Link to="https://twitter.com/nike"><FaTwitter size={40} /></Link></li>
               <li><Link to="https://www.tiktok.com/@nike"><FaTiktok size={40} /></Link></li>
 
-         
+
             </ul>
             <Link to="/">
-            <img src={nikeFooter} alt="My Image" className="d-flex justify-content-end mx-auto mt-5 myImage" />
+              <img src={nikeFooter} alt="My Image" className="d-flex justify-content-end mx-auto mt-5 myImage" />
             </Link>
           </Col>
 

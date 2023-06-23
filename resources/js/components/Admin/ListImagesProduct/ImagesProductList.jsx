@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function ImageProductList() {
   const [data, setData] = useState([]);
-  const categories = ['',"femme", "homme", "enfant", "accessoires"];
+  const categories = ['', "femme", "homme", "enfant", "accessoires"];
   const category = ["Les Femmes", "Les Hommes", "Les Enfants", "Les Accessories"];
 
   const categories1 = [
@@ -40,9 +40,9 @@ export default function ImageProductList() {
         {data.map((item) => (
           <div className="col-sm-3 mt-3 " key={item.id}>
             <Link to={categories[item.id]}>
-            <div className="card">
-              <img src={"http://localhost:8000/" + item.image} alt={item.titre} />
-            </div>
+              <div className="card">
+                <img src={"http://localhost:8000/" + item.image} alt={item.titre} />
+              </div>
             </Link>
           </div>
 
